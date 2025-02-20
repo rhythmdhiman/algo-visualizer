@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", "Roboto", "Open Sans", sans-serif; /* Professional Font */
+}
+
+body {
+  background-color: #2E2E2E; /* Dark Grey Theme */
+}
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  overflow: hidden;
+  background-color: #2E2E2E; 
+  height: 70px;
+}
+
+#title {
+  text-align: center;
+  font-size: 22px;
+  color: #EAEAEA;
+  padding-top: 20px;
+  font-weight: 300;
+}
+
+#algorithm_type {
+  float: right;
+  margin-top: -25px;
+  margin-right: 50px;
+  padding-left: 6px;
+  height: 25px;
+  width: 200px;
+  border-radius: 5px;
+  background: #444444; 
+  color: white;
+  outline: none;
+}
+
+#indicator-container {
+  display: flex;
+  background-color: #2E2E2E; 
+}
+
+.indicator {
+  display: flex;
+  font-weight: 300;
+  margin: 10px 20px;
+  color: white; 
+}
+
+.indicator-block {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+#start-indicator {
+  background-color: #00A8A8; 
+}
+
+#end-indicator {
+  background-color: #FF4C4C; 
+}
+
+#visited-indicator {
+  background-color: #4CA6FF; 
+}
+
+#wall-indicator {
+  background-color: #444444; 
+}
+
+#path-indicator {
+  background-color: #2A3DAA; 
+}
+
+/* Buttons */
+.button {
+  width: 130px;
+  height: 40px;
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+  background: #000000;
+  box-shadow: 6px 6px 12px #12131c, -6px -6px 12px #1c1e2c;
+  transition: all 0.25s ease-in-out;
+  border: none;
+  outline: none;
+  font-weight: 300;
+}
+
+.button:hover {
+  transform: scale(0.97);
+  font-size: 19px;
+  background: linear-gradient(to bottom right, #162D6A, #1E3A8A);
+}
+
+#buttonsdiv {
+  text-align: center;
+}
+
+#visualizeButton {
+  margin-right: 10px;
+}
+
+#clearButton {
+  margin-left: 10px;
+}
+
+.grid {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+.grid td {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #D1D1D1; 
+  text-align: center;
+  background-color: #F8F9FA;
+  font-weight: 500;
+}
+
+.grid td.clicked {
+  background-color: #444444; 
+  animation: clicked_animation 1.5s 1;
+}
+
+.grid td.startPoint {
+  background-color: #00A8A8; /* Teal */
+}
+
+.grid td.endPoint {
+  background-color: #FF4C4C; /* Coral Red */
+}
+
+.grid td.visited {
+  background-color: #4CA6FF; /* Light Blue */
+  animation: visited_animation 2s 1;
+}
+
+@keyframes visited_animation {
+  from {
+      border-radius: 5px;
+      background-color: #2A3DAA; /* Deep Blue */
+  }
+  to {
+      border-radius: 0px;
+      background-color: #4CA6FF; /* Light Blue */
+  }
+}
+
+.grid td.path {
+  background-color: #2A3DAA; /* Deep Blue */
+  animation: change_color 1.5s 1;
+}
+
+@keyframes change_color {
+  from {
+      background-color: #00A8A8; /* Teal */
+  }
+  to {
+      background-color: #2A3DAA; /* Deep Blue */
+  }
+}
